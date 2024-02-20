@@ -1,0 +1,409 @@
+:root {
+  --primary-light: #fbf5fc;
+  --primary-400: #ebe8fe;
+  --primary-color: #3c1f6f;
+  --secondary-color: #36b37e;
+  --light-grey: #e5e5e5;
+  --primary-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.024), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035);
+}
+
+body {
+  font-size: 16px;
+  background: linear-gradient(180deg, var(--primary-light), var(--primary-400));
+  /* width: 380px;
+  height: 650px; */
+  background-size: 180%;
+  font-family: 'Noto Serif', serif;
+  /* overflow: hidden; */
+}
+
+.bg-icon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 80%;
+  z-index: -10;
+  /* left: 30%; */
+  /* bottom: -5px; */
+  mix-blend-mode: overlay;
+}
+
+/* width */
+.number-list-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.body-wrapper {
+  padding: 15px;
+  /* margin-top: 10px; */
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+  box-shadow: var(--primary-shadow);
+  background-color: #fff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+
+.user-side {
+  display: flex;
+  align-items: center;
+}
+
+.user-side span {
+  margin-right: 5px;
+}
+
+.user-side button {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 18px;
+  margin-left: 5px;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-family: 'Tinos', serif;
+  color: var(--primary-color);
+}
+
+.icon {
+  width: 25px;
+}
+
+.action-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.switchery-input {
+  position: relative;
+  width: 44px;
+  height: 22px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #80818b;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  /* margin-left: auto; */
+}
+
+label.active-class {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.switchery-input:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.switchery-input:checked {
+  background-color: var(--primary-color);
+}
+
+.switchery-input:checked::before {
+  transform: translateX(100%);
+}
+
+.btn-primary {
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: 0.5s;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+.btn-primary:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.btn-primary-white {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.btn-primary + .btn-primary {
+  margin-left: 10px;
+}
+
+.number-list-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.number-list-wrapper .item {
+  margin: 10px 5px 10px 0;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number-list-wrapper .item:first-child {
+  margin-top: 0;
+}
+
+.number-list-wrapper .item:last-child {
+  margin-bottom: 0;
+}
+
+.number-input {
+  width: 60px;
+  margin-right: 5px;
+  height: 30px;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 70px;
+  text-align: center;
+  border: 1px solid #a2a2a2;
+  background-color: #efebfa;
+}
+
+.country-code {
+  margin: 0 5px;
+  margin-right: 5px;
+  height: 30px;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 70px;
+  text-align: center;
+  background-color: #efebfa;
+}
+
+.call-btn {
+  align-self: stretch;
+  padding: 5px 15px;
+  text-transform: capitalize;
+}
+
+.tool-tip {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  margin-inline-end: 7px;
+  padding: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.number-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tool-tip::after {
+  content: attr(data-description);
+  position: absolute;
+  padding: 8px;
+  background-color: #fff;
+  width: 200px;
+  left: 30px;
+  border-radius: 8px;
+  box-shadow: var(--primary-shadow);
+  color: var(--primary-color);
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 99;
+  font-weight: 500;
+}
+
+.tool-tip::before {
+  content: '';
+  position: absolute;
+  border: 12px solid #fff;
+  border-color: transparent #fff transparent transparent;
+  left: 7px;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+.tool-tip:hover::after,
+.tool-tip:hover::before {
+  visibility: visible;
+}
+
+.list-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.login-container,
+.signup-container {
+  padding: 20px;
+}
+
+.login-container h2,
+.signup-container h2 {
+  margin: 15px 0;
+}
+
+.login-input,
+.signup-input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signup-text,
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+p.error-message {
+  font-size: 14px;
+  margin: -10px 0 15px;
+  color: rgb(243, 65, 65);
+}
+
+.dialercode-heading p {
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+
+.use-code-heading-second {
+  margin-left: 50px;
+}
+
+.call-info {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.calling {
+  background: #dbdb07 !important;
+  color: #000;
+}
+
+.connected {
+  background: #0d9d0d !important;
+  color: #fff;
+}
+
+.disconnected {
+  background: #f61919 !important;
+  color: #fff;
+}
+
+.call-btn {
+  border: 1px solid #e7e7e7;
+}
+
+.locate-phone-numbers {
+  padding: 10px 12px;
+}
+
+.power_dialer_btn {
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 10px 12px;
+}
+
+p.dialer-message-exists {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.check-contactpad {
+  display: flex;
+  align-items: center;
+}
+
+.check-contactpad input#scales {
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+.check-contactpad input[type='checkbox']:checked {
+  accent-color: var(--primary-color);
+}
+
+.check-contactpad label {
+  font-size: 14px;
+}
+
+button.vgip-button {
+  top: 166px !important;
+  left: 58px !important;
+}

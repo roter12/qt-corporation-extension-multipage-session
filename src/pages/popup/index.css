@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Serif', serif;
+}
+
+body {
+  font-family: 'Tinos', serif;
+}
+
+button.vgip-button iframe {
+  top: -2px !important;
+  left: -2px !important;
+}
